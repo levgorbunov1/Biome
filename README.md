@@ -1,5 +1,7 @@
-# my-pc-game
-I'm developing a video game for PC (Steam).
+# Biome
+I'm developing an organism simulator for PC (Steam).
+
+Inspired by Spore (https://www.spore.com/).
 
 # Setup
 - Install Unity Hub and Unity Editor from https://unity.com/download
