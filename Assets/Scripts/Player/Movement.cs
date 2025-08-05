@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     private InputActions inputActions;
 
-    public float moveSpeed = 5f;
-    public float rotationSpeed = 90f;
-    public float maxPitch = 89f;
+     private Vector2 screenCenter;
 
-    private Vector2 screenCenter;
+    public float moveSpeed = 5f;
+    public float mouseSensitivity = 1.5f;
+    public float maxPitch = 89f;
+    private float pitch = 0f;  
+    private float yaw = 0f;
 
     private void Awake()
     {
@@ -18,12 +21,23 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         inputActions.Enable();
+
         screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
+
+        Vector3 angles = transform.rotation.eulerAngles;
+        yaw = angles.y;
+        pitch = angles.x;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void OnDisable()
     {
         inputActions.Disable();
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()
@@ -34,35 +48,24 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleRotationFromMouse()
     {
-        Vector2 mousePos = inputActions.Player.MousePosition.ReadValue<Vector2>();
-        Vector2 offsetFromCenter = (mousePos - screenCenter) / screenCenter;
+        Vector2 mouseDelta = inputActions.Player.MouseDelta.ReadValue<Vector2>();
 
-        float yawDelta = offsetFromCenter.x * rotationSpeed * Time.deltaTime;
-        float pitchDelta = -offsetFromCenter.y * rotationSpeed * Time.deltaTime;
+        float yawDelta = mouseDelta.x * mouseSensitivity;
+        float pitchDelta = -mouseDelta.y * mouseSensitivity;
 
-        Vector3 currentEuler = transform.rotation.eulerAngles;
+        yaw += yawDelta;
+        pitch += pitchDelta;
 
-        float newPitch = currentEuler.x + pitchDelta;
-        float newYaw = currentEuler.y + yawDelta;
+        pitch = Mathf.Clamp(pitch, -maxPitch, maxPitch);
+        yaw = Mathf.Repeat(yaw, 360f);
 
-        // Wrap yaw to avoid overflow
-        newYaw = Mathf.Repeat(newYaw, 360f);
-        // Clamp pitch to prevent flip
-        newPitch = ClampPitch(newPitch);
-
-        transform.rotation = Quaternion.Euler(newPitch, newYaw, 0f);
+        transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
     }
 
-    float ClampPitch(float pitch)
-    {
-        if (pitch > 180f) pitch -= 360f;
-        return Mathf.Clamp(pitch, -maxPitch, maxPitch);
-    }
 
     void HandleMovement()
     {
         Vector3 moveInput = inputActions.Player.Move.ReadValue<Vector3>();
-
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.z;
 
         transform.position += move * moveSpeed * Time.deltaTime;

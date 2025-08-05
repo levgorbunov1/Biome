@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "MousePosition",
+                    "name": "MouseDelta",
                     "type": "Value",
                     "id": "557175ae-7fdd-4ed7-9780-af8f027a2ebd",
                     "expectedControlType": "Vector2",
@@ -83,11 +83,11 @@
                 {
                     "name": "",
                     "id": "dd90d63d-843d-4c46-8b6b-1dd855530e43",
-                    "path": "<Mouse>/position",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MousePosition",
+                    "action": "MouseDelta",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
