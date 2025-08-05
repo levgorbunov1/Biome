@@ -15,7 +15,7 @@ I'm developing a video game for PC (Steam).
 - Leverage premade assets - Modify premade assets?
 
 # Design descisions
-- 3D game
-- Built for PC (Steam)
+- Dimensions: 3D
+- Platform: Built for PC (Steam)
 - Genre: Simulator
 - Theme: Animal/Organism Simulator
