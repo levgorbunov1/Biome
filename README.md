@@ -9,3 +9,6 @@ I'm developing a video game for PC (Steam).
 - Leverage premade assets - Modify premade assets?
 - Build for PC (Steam)
 
+# Design Descisions
+- 3D
+
