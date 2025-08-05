@@ -13,5 +13,9 @@ I'm developing a video game for PC (Steam).
 # Ideas
 - Open to collaboration
 - Leverage premade assets - Modify premade assets?
-- Build for PC (Steam)
 
+# Design descisions
+- 3D game
+- Built for PC (Steam)
+- Genre: Simulator
+- Theme: Animal/Organism Simulator
