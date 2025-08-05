@@ -19,3 +19,4 @@ I'm developing a video game for PC (Steam).
 - Platform: Built for PC (Steam)
 - Genre: Simulator
 - Theme: Animal/Organism Simulator
+- Polycount: Low (think Spore)
