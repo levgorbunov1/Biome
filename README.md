@@ -22,3 +22,6 @@ Inspired by Spore (https://www.spore.com/).
 - Genre: Simulator
 - Theme: Animal/Organism Simulator
 - Polycount: Low (think Spore)
+
+# Contributing
+- Active features are listed [here](FEATURES.md)
