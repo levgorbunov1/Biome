@@ -8,7 +8,7 @@ public class CharacterControllerSpawner : MonoBehaviour
     [Header("Spawn Settings")]
     public Vector3 spawnPosition = Vector3.zero;
 
-    void Start()
+    void OnEnable()
     {
         GameObject player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
     }

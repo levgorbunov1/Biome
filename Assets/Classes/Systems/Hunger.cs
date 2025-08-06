@@ -9,6 +9,8 @@ public class HungerSystem : MonoBehaviour
     public float hungerInterval = 2f;
     private float hungerTimer;
 
+    public StatBar hungerBar;
+
     void Update()
     {
         hungerTimer += Time.deltaTime;
@@ -17,6 +19,15 @@ public class HungerSystem : MonoBehaviour
         {
             hungerTimer = 0f;
             Starve(1);
+        }
+
+        if (hungerBar != null)
+        {
+            hungerBar.SetValue(currentHunger);
+        }
+        else
+        {
+            Debug.Log("No hunger bar to update");
         }
     }
 
