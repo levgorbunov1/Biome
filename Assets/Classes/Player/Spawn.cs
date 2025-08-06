@@ -11,10 +11,5 @@ public class CharacterControllerSpawner : MonoBehaviour
     void Start()
     {
         GameObject player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
-
-        MeshRenderer mr = GetComponent<MeshRenderer>();
-        
-        if (mr != null)
-            mr.enabled = false;
     }
 }

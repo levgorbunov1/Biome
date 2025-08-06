@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7512764160658297526}
   - component: {fileID: 1462148525169466859}
+  - component: {fileID: 5181463189903924769}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -39,16 +40,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723467665098081466}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61207ab272ab14b6c88eed0a489f6e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segmentCount: 6
-  segmentSpacing: 0.5
+  segmentCount: 5
+  segmentSpacing: 0.2
+  segmentScale: {x: 0.5, y: 0.5, z: 0.5}
+  segmentMaterial: {fileID: 2100000, guid: be7a475eac8dc4c31b77225708256eca, type: 2}
+--- !u!114 &5181463189903924769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723467665098081466}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b0af4801aca424ebf9c5281896b19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   waveFrequency: 2
   waveAmplitude: 0.2
-  waveSpeed: 2
+  waveSpeed: 5
 --- !u!1 &1789214690268434987
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3977488407409007756}
-  offset: {x: 0, y: 10, z: -10}
+  offset: {x: 0, y: 3, z: -6}
+  rotationOffsetEuler: {x: 15, y: 0, z: 0}
   smoothSpeed: 5
 --- !u!114 &6412765344582915757
 MonoBehaviour:
@@ -269,7 +285,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4066969881764005966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -351,7 +367,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
