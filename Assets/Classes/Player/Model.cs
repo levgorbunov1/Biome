@@ -32,6 +32,9 @@ public class WormModelGenerator : MonoBehaviour
             segment.transform.SetParent(WormRoot);
             segment.transform.localScale = segmentScale;
 
+            Collider collider = segment.GetComponent<Collider>();
+            collider.isTrigger = true;
+
             if (segmentMaterial != null)
             {
                 Renderer renderer = segment.GetComponent<Renderer>();
