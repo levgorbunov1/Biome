@@ -23,7 +23,6 @@ public class HungerSystem : MonoBehaviour
     void Starve(int amount)
     {
         currentHunger = Mathf.Max(currentHunger - amount, 0);
-        Debug.Log($"Hunger: {currentHunger}");
 
         if (currentHunger <= 0)
         {
