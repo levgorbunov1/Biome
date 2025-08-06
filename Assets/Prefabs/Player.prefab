@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 6771543823958475124}
   - component: {fileID: 8412310298824231621}
   - component: {fileID: 7705912697063884878}
+  - component: {fileID: 7406816119326465181}
   - component: {fileID: 3614528003075184627}
   m_Layer: 0
   m_Name: Player
@@ -371,6 +372,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7406816119326465181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066969881764005966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8528d794764cd4ad2a53d87e02571750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diet: 0
+  maxHunger: 100
+  currentHunger: 5
+  hungerInterval: 2
 --- !u!114 &3614528003075184627
 MonoBehaviour:
   m_ObjectHideFlags: 0

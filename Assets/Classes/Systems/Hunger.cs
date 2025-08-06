@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PlayerHunger : MonoBehaviour
+public class HungerSystem : MonoBehaviour
 {
     public Diet diet = Diet.Herbivore;
 
     public int maxHunger = 100;
-    public int currentHunger = 100;
+    public int currentHunger = 5;
     public float hungerInterval = 2f;
     private float hungerTimer;
 
