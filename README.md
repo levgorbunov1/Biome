@@ -5,6 +5,7 @@ Inspired by Spore (https://www.spore.com/).
 
 # Setup
 - Install Unity Hub and Unity Editor from https://unity.com/download
+- Install Blender for 3D modelling from https://www.blender.org/download/
 - Clone this repository and open it as a project in the Unity Editor
 - Unity should automatically generate certain local files/folders, including:
     - Assembly-CSharp-Editor.csproj

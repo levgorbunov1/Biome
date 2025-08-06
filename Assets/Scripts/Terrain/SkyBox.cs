@@ -7,10 +7,10 @@ public class UnderwaterEffect : MonoBehaviour
 
     void Start()
     {
-        RenderSettings.fog = true;
-        RenderSettings.fogMode = FogMode.Exponential;
-        RenderSettings.fogDensity = 0.02f;
-        RenderSettings.fogColor = new Color32(106, 189, 207, 255);
+        // RenderSettings.fog = true;
+        // RenderSettings.fogMode = FogMode.Exponential;
+        // RenderSettings.fogDensity = 0.02f;
+        // RenderSettings.fogColor = new Color32(106, 189, 207, 255);
 
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
         RenderSettings.ambientLight = new Color(0f, 0.2f, 0.3f);
