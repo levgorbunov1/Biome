@@ -4,4 +4,4 @@
 - ✅ 3D model: Opted to procedurally generate the model and program the animation
 
 
-[Video Clip](Recordings/Movie_001.mp4)
+[Download Video Clip](Recordings/Movie_001.mp4)
