@@ -23,6 +23,10 @@ the Spore planet or a defined bounding box.
 
 ## Player systems interaction - health
 
+## Character system - Evolution
+
+## Character system - Reproduction
+
 ## AI - Procedural generation
 
 ## AI - Interaction with world (Pathfinding)
