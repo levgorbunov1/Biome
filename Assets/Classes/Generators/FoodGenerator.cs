@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FoodSpawner : MonoBehaviour
+public class foodGenerator : MonoBehaviour
 {
     [Header("Prefab Reference")]
     public GameObject foodPrefab;

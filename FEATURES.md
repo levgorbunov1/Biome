@@ -15,19 +15,23 @@
 
 [Download Video Clip](Recordings/Movie_006.mp4)
 
-## Procedural terrain/inanimate prop generation - Current
-- I want to procedurally generate terrain in my bounding box from a random seed.
-- The terrain will be made up of the following components:
-    - Hills (restrict size)
-    - Water features 
-    - Trees/flora
-    - Terrain tecture - desert, grassland etc.
+## AI - Basic: Procedural generation, Pathfindinging
+- ✅ Create a single instance of the same character model that you use for the player
+- ✅ Create basic AI pathfinding - make the model move continuosly in a random direction. Make the model randomly change direction when it hits the boundry box.
+- ✅ Create a prefab for the character
+- ✅ Procedurally generate the AI controlled character within your bounding box
+
+[Download Video Clip](Recordings/Movie_007.mp4)
 
 ## Player systems interaction - health
 
-## Environment - Skybox
+## Procedural terrain/inanimate prop generation
 
 ## Character system - Evolution
+
+## Bugs
+- The game has some content now
+- Revisit previous features and fix bugs/make minor improvements, remove debug
 
 ## Character system - Reproduction
 
@@ -40,6 +44,8 @@
 ## AI - Interaction with player - Flee
 
 ## AI - Interaction with other AI
+
+## Character Classes - Carnivores, Opportunists, Herbivores, Scavengers etc.
 
 ## Tidy Up 
 - The game has some content now

@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GeneratorController : MonoBehaviour
 {
@@ -7,38 +9,33 @@ public class GeneratorController : MonoBehaviour
     public GameObject playerGenerator;
     public GameObject zoneGenerator;
     public GameObject foodGenerator;
+    public GameObject terrainGenerator;
+    public GameObject AIGenerator;
 
     void Awake()
     {
         StartCoroutine(InitializeGenerators());
     }
 
-    private System.Collections.IEnumerator InitializeGenerators()
+    private IEnumerator InitializeGenerators()
     {
-        if (zoneGenerator != null)
+        List<GameObject> generators = new List<GameObject>
         {
-            zoneGenerator.SetActive(true);
-            yield return null; 
-        }
+            zoneGenerator,
+            // terrainGenerator, // Uncomment if/when needed
+            foodGenerator,
+            AIGenerator,
+            playerGenerator,
+            uiGenerator
+        };
 
-        if (foodGenerator != null)
+        foreach (GameObject generator in generators)
         {
-            foodGenerator.SetActive(true);
-            yield return null; 
+            if (generator != null)
+            {
+                generator.SetActive(true);
+                yield return null;
+            }
         }
-
-        if (playerGenerator != null)
-        {
-            playerGenerator.SetActive(true);
-            yield return null; 
-        }
-        
-        if (uiGenerator != null)
-        {
-            uiGenerator.SetActive(true);
-            yield return null;
-        }
-
-        Debug.Log("All generators enabled.");
     }
 }

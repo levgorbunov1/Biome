@@ -1,1 +1,2 @@
+- Collision of player and ai is currently broken: animation breaks and character starts to fall.
 - Movement: Flipping occurs on the y axis when you move directly up or down.

@@ -37,7 +37,6 @@ public class HungerSystem : MonoBehaviour
 
         if (currentHunger <= 0)
         {
-            Debug.Log("Player is starving!");
         }
     }
 
