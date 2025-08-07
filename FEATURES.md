@@ -58,3 +58,6 @@ the Spore planet or a defined bounding box.
 ## 3D Modelling - Terrain
 
 ## 3D Modelling - Consumables
+
+## Music and audio
+
