@@ -23,6 +23,8 @@ the Spore planet or a defined bounding box.
 
 ## Player systems interaction - health
 
+## Environment - Skybox
+
 ## Character system - Evolution
 
 ## Character system - Reproduction
