@@ -5,7 +5,7 @@ public class HungerSystem : MonoBehaviour
     public Diet diet = Diet.Herbivore;
 
     public int maxHunger = 100;
-    public int currentHunger = 5;
+    public int currentHunger = 20;
     public float hungerInterval = 2f;
     private float hungerTimer;
 
@@ -18,7 +18,7 @@ public class HungerSystem : MonoBehaviour
         if (hungerTimer >= hungerInterval)
         {
             hungerTimer = 0f;
-            Starve(1);
+            Starve(5);
         }
 
         if (hungerBar != null)

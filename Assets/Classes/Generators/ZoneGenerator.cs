@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ZoneBoundary2DWall : MonoBehaviour
+public class ZoneGenerator : MonoBehaviour
 {
     [Header("Zone Dimensions")]
     public float zoneWidth = 50f;
@@ -10,7 +10,7 @@ public class ZoneBoundary2DWall : MonoBehaviour
     [Header("Optional")]
     public bool showDebugGizmos = true;
 
-    void Start()
+    void OnEnable()
     {
         GenerateWalls();
     }

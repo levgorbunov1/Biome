@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8528d794764cd4ad2a53d87e02571750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diet: 0
+  diet: 1
   maxHunger: 100
   currentHunger: 5
   hungerInterval: 2

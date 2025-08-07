@@ -5,6 +5,8 @@ public class GeneratorController : MonoBehaviour
     [Header("Generator References")]
     public GameObject uiGenerator;
     public GameObject playerGenerator;
+    public GameObject zoneGenerator;
+    public GameObject foodGenerator;
 
     void Awake()
     {
@@ -13,6 +15,18 @@ public class GeneratorController : MonoBehaviour
 
     private System.Collections.IEnumerator InitializeGenerators()
     {
+        if (zoneGenerator != null)
+        {
+            zoneGenerator.SetActive(true);
+            yield return null; 
+        }
+
+        if (foodGenerator != null)
+        {
+            foodGenerator.SetActive(true);
+            yield return null; 
+        }
+
         if (playerGenerator != null)
         {
             playerGenerator.SetActive(true);
