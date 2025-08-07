@@ -5,7 +5,7 @@ Inspired by Spore (https://www.spore.com/).
 
 # Concept
 I've always been fascinated by the natural world and ecosystem dynamics, and played a lot of Spore when I was a child, which implements a basic model of natural competition and evolution.
-I would like to build a virtual experience similar to Spore but more developed in it's modelling of aspects of the natural world, including concepts such as interspecies competition, reproduction, and evolution.
+I would like to build a virtual experience similar to Spore but more developed in it's modelling of aspects of the natural world, including concepts such as interspecies competition, reproduction, and evolution. Or I make take the game in a more cellular direction, investigating the microbiome and human body.
 
 # Setup
 - Install Unity Hub and Unity Editor from https://unity.com/download
