@@ -16,10 +16,12 @@
 [Download Video Clip](Recordings/Movie_006.mp4)
 
 ## Procedural terrain/inanimate prop generation - Current
-- Investigate how Minecraft procedurally generates terrain - can we procedurally generate a terrain map from which we procedurally generate a 3D terrain (underwater/overground)
-- Investigate Spore style terrain generation - break terrain down into components e.g. hills, trees, water etc. and randomize their creation in a map of a manageable size e.g.
-the Spore planet or a defined bounding box.
-- Implement the procedural generation of terrain using the chosen method.
+- I want to procedurally generate terrain in my bounding box from a random seed.
+- The terrain will be made up of the following components:
+    - Hills (restrict size)
+    - Water features 
+    - Trees/flora
+    - Terrain tecture - desert, grassland etc.
 
 ## Player systems interaction - health
 
@@ -45,7 +47,7 @@ the Spore planet or a defined bounding box.
 
 ## UI - Start Menu
 
-## Multi-scene content
+## Instanced/Multi-scene content
 
 ## Animation - Death
 
