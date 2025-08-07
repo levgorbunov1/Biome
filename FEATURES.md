@@ -12,4 +12,5 @@
 - ✅ I want to create a food consumable object that the player can interact with, and which affects their hunger stat
 - ✅ I want to create two types of the food object class for herbivores (green) and carnivores (red)
 - ✅ I want to procedurally generate these objects within my bounding box
-- When hunger hits 0, I want a die animation to trigger and the player object to be deleted
+
+[Download Video Clip](Recordings/Movie_006.mp4)
