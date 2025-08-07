@@ -1,0 +1,1 @@
+- Movement: Flipping occurs on the y axis when you move directly up or down.
