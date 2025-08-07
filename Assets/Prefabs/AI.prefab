@@ -199,9 +199,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4072514132859100280, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+      propertyPath: waveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7531927202668234467, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
       propertyPath: m_Name
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721037837989650354, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+      propertyPath: segmentCount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

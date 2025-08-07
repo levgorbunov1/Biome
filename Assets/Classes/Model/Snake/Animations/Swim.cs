@@ -8,23 +8,18 @@ public class WormAnimator : MonoBehaviour
     public float waveSpeed = 2f;
 
     private WormModelGenerator generator;
-    private Vector3 lastPosition;
 
     void Start()
     {
         generator = GetComponent<WormModelGenerator>();
-        lastPosition = transform.position;
     }
 
     void Update()
     {
-        bool isMoving = (transform.position != lastPosition);
-        lastPosition = transform.position;
-
-        AnimateWorm(isMoving);
+        AnimateWorm();
     }
 
-    private void AnimateWorm(bool shouldWriggle)
+    private void AnimateWorm()
     {
         if (generator.Segments == null || generator.BasePositions == null)
             return;
@@ -35,10 +30,8 @@ public class WormAnimator : MonoBehaviour
             float offset = i * 0.5f;
 
             float y = 0f;
-            if (shouldWriggle)
-            {
-                y = Mathf.Sin(Time.time * waveSpeed + offset * waveFrequency) * waveAmplitude;
-            }
+
+            y = Mathf.Sin(Time.time * waveSpeed + offset * waveFrequency) * waveAmplitude;
 
             generator.Segments[i].localPosition = new Vector3(y, 0, basePos.z);
         }

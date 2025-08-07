@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3977488407409007756}
-  offset: {x: 0, y: 3, z: -6}
-  rotationOffsetEuler: {x: 15, y: 0, z: 0}
+  offset: {x: 0, y: 5, z: -6}
+  rotationOffsetEuler: {x: 15, y: 3, z: 0}
   smoothSpeed: 5
 --- !u!114 &6412765344582915757
 MonoBehaviour:
@@ -388,9 +388,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4072514132859100280, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+      propertyPath: waveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7531927202668234467, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721037837989650354, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+      propertyPath: segmentCount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

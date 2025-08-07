@@ -21,7 +21,7 @@
 - ✅ Create a prefab for the character
 - ✅ Procedurally generate the AI controlled character within your bounding box
 
-[Download Video Clip](Recordings/Movie_007.mp4)
+[Download Video Clip](Recordings/Movie_008.mp4)
 
 ## Player systems interaction - health
 
