@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4066086541862973612}
   - component: {fileID: 575316240715339599}
   - component: {fileID: 6832338142411987139}
+  - component: {fileID: 8805256001583449508}
   - component: {fileID: 8412860143470910942}
   - component: {fileID: 8393553187159123528}
   m_Layer: 0
@@ -103,6 +104,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+--- !u!114 &8805256001583449508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674185754646926033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8528d794764cd4ad2a53d87e02571750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  diet: 0
+  maxHunger: 100
+  currentHunger: 20
+  hungerInterval: 2
+  hungerBar: {fileID: 0}
 --- !u!135 &8412860143470910942
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -133,8 +152,8 @@ Rigidbody:
   m_GameObject: {fileID: 5674185754646926033}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 10
+  m_AngularDamping: 10
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}

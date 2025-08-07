@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HungerSystem : MonoBehaviour
 {
+    public bool isPlayer = true;
     public Diet diet = Diet.Herbivore;
 
     public int maxHunger = 100;
@@ -13,6 +14,8 @@ public class HungerSystem : MonoBehaviour
 
     void Update()
     {
+        if (!isPlayer) return;
+        
         hungerTimer += Time.deltaTime;
 
         if (hungerTimer >= hungerInterval)

@@ -20,8 +20,9 @@
 - ✅ Create basic AI pathfinding - make the model move continuosly in a random direction. Make the model randomly change direction when it hits the boundry box.
 - ✅ Create a prefab for the character
 - ✅ Procedurally generate the AI controlled character within your bounding box
+- ✅ Add hunger system to AI so it can consume food.
 
-[Download Video Clip](Recordings/Movie_008.mp4)
+[Download Video Clip](Recordings/Movie_016.mp4)
 
 ## Player systems interaction - health
 
