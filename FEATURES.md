@@ -59,5 +59,7 @@ the Spore planet or a defined bounding box.
 
 ## 3D Modelling - Consumables
 
+## Performance Optimization
+
 ## Music and audio
 
