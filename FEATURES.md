@@ -27,6 +27,8 @@
 
 ## Procedural terrain/inanimate prop generation
 
+## Environment - skybox
+
 ## Character system - Evolution
 
 ## Bugs
