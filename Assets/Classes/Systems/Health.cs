@@ -7,9 +7,11 @@ public class HealthSystem : MonoBehaviour, IStatSystem
 
     private StatBar hungerBar;
     private MovementController movementController;
+    private WormAnimator animator;
 
     void Awake() {
         movementController = transform.parent.GetComponentInChildren<MovementController>();
+        animator = transform.parent.GetComponentInChildren<WormAnimator>();
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class HealthSystem : MonoBehaviour, IStatSystem
         if (currentHealth <= 0)
         {
             movementController.enabled = false;
+            StartCoroutine(animator.DeathAnimation());
         }
     }
 

@@ -480,11 +480,35 @@ PrefabInstance:
       propertyPath: segmentCount
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4072514132859100280, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7531927202668234467, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2981754834353632562}
   m_SourcePrefab: {fileID: 100100000, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+--- !u!1 &1723467665098081466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7531927202668234467, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
+  m_PrefabInstance: {fileID: 9181778986310517337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2981754834353632562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723467665098081466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa60beb56138b47fcaa30714292edf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveFrequency: 2
+  waveAmplitude: 0.2
+  waveSpeed: 5
 --- !u!4 &7512764160658297526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1670422476497981679, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
