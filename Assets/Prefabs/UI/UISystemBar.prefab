@@ -45,9 +45,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181992635205989413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d35f38d53b2c42b1a990a1ad8950e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 92e7a43d5c4084d6f8f07cce8630112f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _statName: Stat
   minValue: 0
   maxValue: 100
+  color: {r: 0.29803923, g: 0.29803923, b: 0.29803923, a: 1}

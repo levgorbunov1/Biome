@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5682637720682117690}
   - component: {fileID: 1135000159946501277}
+  - component: {fileID: 8894401279170352731}
   m_Layer: 0
   m_Name: SystemsController
   m_TagString: Untagged
@@ -49,7 +50,20 @@ MonoBehaviour:
   maxHunger: 100
   currentHunger: 20
   hungerInterval: 2
-  hungerBar: {fileID: 0}
+--- !u!114 &8894401279170352731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947000063017798241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59b6c7663ce241d0b4a3cd2413eaf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &1789214690268434987
 GameObject:
   m_ObjectHideFlags: 0

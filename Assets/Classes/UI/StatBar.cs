@@ -3,13 +3,14 @@ using UnityEngine.UI;
 
 public class StatBar : MonoBehaviour
 {
-    [SerializeField] private string _statName = "Stat";
-    private Slider slider;
-    private Text label;
-
     public float minValue = 0f;
     public float maxValue = 100f;
 
+    private Slider slider;
+    private Text label;
+    private Image fillImage;
+
+    private string _statName;
     public string statName
     {
         get => _statName;
@@ -23,7 +24,19 @@ public class StatBar : MonoBehaviour
         }
     }
 
-    public string color = "blue";
+    private Color _color;
+    public Color color
+    {
+        get => _color;
+        set
+        {
+            _color = value;
+            if (fillImage != null)
+            {
+                fillImage.color = _color;
+            }
+        }
+    }
 
     void Awake()
     {
@@ -53,8 +66,8 @@ public class StatBar : MonoBehaviour
 
         GameObject fillGO = new GameObject("Fill");
         fillGO.transform.SetParent(fillAreaGO.transform);
-        Image fillImage = fillGO.AddComponent<Image>();
-        fillImage.color = Color.blue;
+        fillImage = fillGO.AddComponent<Image>();
+        fillImage.color = color;
         RectTransform fillRT = fillGO.GetComponent<RectTransform>();
         fillRT.anchorMin = new Vector2(0, 0);
         fillRT.anchorMax = new Vector2(1, 1);
@@ -76,18 +89,20 @@ public class StatBar : MonoBehaviour
         slider.value = maxValue;
 
         GameObject labelGO = new GameObject("Label");
-        labelGO.transform.SetParent(transform);
+        labelGO.transform.SetParent(sliderGO.transform);
+
         label = labelGO.AddComponent<Text>();
         label.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         label.text = _statName;
         label.alignment = TextAnchor.MiddleCenter;
+        label.color = Color.white;
 
         RectTransform labelRT = label.GetComponent<RectTransform>();
-        labelRT.sizeDelta = new Vector2(200, 20);
-        labelRT.anchorMin = new Vector2(0.5f, 0);
-        labelRT.anchorMax = new Vector2(0.5f, 0);
-        labelRT.pivot = new Vector2(0.5f, 0);
-        labelRT.anchoredPosition = new Vector2(0, 55);
+        labelRT.anchorMin = new Vector2(0f, 0f);
+        labelRT.anchorMax = new Vector2(1f, 1f);
+        labelRT.offsetMin = Vector2.zero;
+        labelRT.offsetMax = Vector2.zero;
+        labelRT.pivot = new Vector2(0.5f, 0.5f);
     }
 
     public void SetValue(float currentValue)

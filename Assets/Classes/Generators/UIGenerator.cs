@@ -25,11 +25,11 @@ public class UIController : MonoBehaviour
 
     void CreatePlayerStatUI()
     {
-        var statSystems = new (string name, IStatSystem system, string color)[]
+        var statSystems = new (string name, IStatSystem system, Color color)[]
 
         {
-            ("Hunger", FindFirstObjectByType<HungerSystem>(), "brown"),
-            ("Health", FindFirstObjectByType<HealthSystem>(), "red")
+            ("Health", FindFirstObjectByType<HealthSystem>(), Color.red),
+            ("Hunger", FindFirstObjectByType<HungerSystem>(), Color.blue),
         };
 
         int index = 0;
@@ -40,7 +40,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    void CreateStatBar(string statName, IStatSystem system, int index, string color)
+    void CreateStatBar(string statName, IStatSystem system, int index, Color color)
     {
         if (statBarPrefab != null)
         {
