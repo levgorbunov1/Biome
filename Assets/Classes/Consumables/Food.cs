@@ -7,7 +7,7 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        HungerSystem hungerSystem = other.GetComponent<HungerSystem>();
+        HungerSystem hungerSystem = other.GetComponentInChildren<HungerSystem>();
 
         if (hungerSystem != null && diet == hungerSystem.diet)
         {

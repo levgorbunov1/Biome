@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 9203450191836142606}
   - component: {fileID: 4066086541862973612}
   - component: {fileID: 575316240715339599}
-  - component: {fileID: 6832338142411987139}
-  - component: {fileID: 8805256001583449508}
   - component: {fileID: 8412860143470910942}
+  - component: {fileID: 6289008552659503158}
   - component: {fileID: 8393553187159123528}
   m_Layer: 0
   m_Name: AI
@@ -36,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8958226720721879135}
+  - {fileID: 2351964200427650080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4066086541862973612
@@ -91,37 +91,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6832338142411987139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674185754646926033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d30d2248681ad4c7ca73b6a64de4daac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
---- !u!114 &8805256001583449508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674185754646926033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8528d794764cd4ad2a53d87e02571750, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 0
-  diet: 0
-  maxHunger: 100
-  currentHunger: 20
-  hungerInterval: 2
-  hungerBar: {fileID: 0}
 --- !u!135 &8412860143470910942
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -143,6 +112,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6289008552659503158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674185754646926033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30d2248681ad4c7ca73b6a64de4daac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
 --- !u!54 &8393553187159123528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,6 +152,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &8835912479963311787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2351964200427650080}
+  - component: {fileID: 8312005510402463036}
+  m_Layer: 0
+  m_Name: SystemController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2351964200427650080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835912479963311787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9203450191836142606}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8312005510402463036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835912479963311787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8528d794764cd4ad2a53d87e02571750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  diet: 0
+  maxHunger: 100
+  currentHunger: 20
+  hungerInterval: 2
+  hungerBar: {fileID: 0}
 --- !u!1001 &7745219223335981232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7531927202668234467, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
       propertyPath: m_Name
-      value: Snake
+      value: ModelController
       objectReference: {fileID: 0}
     - target: {fileID: 7721037837989650354, guid: 7279c408da7a143a6bdf76bfd2a3c1bb, type: 3}
       propertyPath: segmentCount

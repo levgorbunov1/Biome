@@ -15,7 +15,7 @@
 
 [Download Video Clip](Recordings/Movie_006.mp4)
 
-## AI - Basic: Procedural generation, Pathfindinging
+## AI - Basic: Procedural generation, Pathfinding
 - ✅ Create a single instance of the same character model that you use for the player
 - ✅ Create basic AI pathfinding - make the model move continuosly in a random direction. Make the model randomly change direction when it hits the boundry box.
 - ✅ Create a prefab for the character
@@ -25,6 +25,10 @@
 [Download Video Clip](Recordings/Movie_016.mp4)
 
 ## Player systems interaction - health
+- Implement a 2nd system for health
+- Create the interaction between the health and hunger systems
+- Implement a death animation
+- When health hits 0, disable the movement controller, trigger the death animation, and end the game
 
 ## Procedural terrain/inanimate prop generation
 
