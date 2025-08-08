@@ -15,7 +15,7 @@ public class HungerSystem : MonoBehaviour
     void Update()
     {
         if (!isPlayer) return;
-        
+
         hungerTimer += Time.deltaTime;
 
         if (hungerTimer >= hungerInterval)
@@ -27,10 +27,6 @@ public class HungerSystem : MonoBehaviour
         if (hungerBar != null)
         {
             hungerBar.SetValue(currentHunger);
-        }
-        else
-        {
-            Debug.Log("No hunger bar to update");
         }
     }
 
