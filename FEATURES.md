@@ -25,10 +25,12 @@
 [Download Video Clip](Recordings/Movie_016.mp4)
 
 ## Player systems interaction - health
-- Implement a 2nd system for health
-- Create the interaction between the health and hunger systems
-- Implement a death animation
-- When health hits 0, disable the movement controller, trigger the death animation, and end the game
+- ✅ Implement a 2nd system for health
+- ✅ Create the interaction between the health and hunger systems
+- ✅ Implement a death animation
+- ✅ When health hits 0, disable the movement controller, trigger the death animation, and end the game
+
+[Download Video Clip](Recordings/Movie_017.mp4)
 
 ## Procedural terrain/inanimate prop generation
 

@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 20
 --- !u!1001 &7745219223335981232
 PrefabInstance:
   m_ObjectHideFlags: 0
