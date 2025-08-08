@@ -23,6 +23,8 @@ public class StatBar : MonoBehaviour
         }
     }
 
+    public string color = "blue";
+
     void Awake()
     {
         GameObject sliderGO = new GameObject("Slider");

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HungerSystem : MonoBehaviour
+public class HungerSystem : MonoBehaviour, IStatSystem
 {
     public bool isPlayer = true;
     public Diet diet = Diet.Herbivore;
@@ -10,7 +10,7 @@ public class HungerSystem : MonoBehaviour
     public float hungerInterval = 2f;
     private float hungerTimer;
 
-    public StatBar hungerBar;
+    private StatBar healthBar;
 
     void Update()
     {
@@ -24,9 +24,9 @@ public class HungerSystem : MonoBehaviour
             Starve(5);
         }
 
-        if (hungerBar != null)
+        if (healthBar != null)
         {
-            hungerBar.SetValue(currentHunger);
+            healthBar.SetValue(currentHunger);
         }
     }
 
@@ -42,5 +42,10 @@ public class HungerSystem : MonoBehaviour
     public void Feed(float amount)
     {
         currentHunger = (int)Mathf.Clamp(currentHunger + amount, 0f, maxHunger);
+    }
+
+    public void SetStatBar(StatBar statBar)
+    {
+        healthBar = statBar;
     }
 }

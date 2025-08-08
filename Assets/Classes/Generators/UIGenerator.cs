@@ -1,46 +1,75 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UIController : MonoBehaviour
 {
     public StatBar statBarPrefab;
+    private Transform canvasTransform;
 
-    private StatBar hungerBar;
+    private void OnEnable()
+    {
+        CreateCanvas();
+        CreatePlayerStatUI();
+    }
 
-    void OnEnable()
+    void CreateCanvas()
     {
         GameObject canvasGO = new GameObject("Canvas");
         var canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = UnityEngine.RenderMode.ScreenSpaceOverlay;
-        canvasGO.AddComponent<UnityEngine.UI.CanvasScaler>();
-        canvasGO.AddComponent<UnityEngine.UI.GraphicRaycaster>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvasGO.AddComponent<CanvasScaler>();
+        canvasGO.AddComponent<GraphicRaycaster>();
+        canvasTransform = canvasGO.transform;
+    }
 
+    void CreatePlayerStatUI()
+    {
+        var statSystems = new (string name, IStatSystem system, string color)[]
+
+        {
+            ("Hunger", FindFirstObjectByType<HungerSystem>(), "brown"),
+            ("Health", FindFirstObjectByType<HealthSystem>(), "red")
+        };
+
+        int index = 0;
+
+        foreach (var (name, system, color) in statSystems)
+        {
+            CreateStatBar(name, system, index++, color);
+        }
+    }
+
+    void CreateStatBar(string statName, IStatSystem system, int index, string color)
+    {
         if (statBarPrefab != null)
         {
-            hungerBar = Instantiate(statBarPrefab, canvasGO.transform);
+            StatBar statBar = Instantiate(statBarPrefab, canvasTransform);
 
-            RectTransform barRT = hungerBar.GetComponent<RectTransform>();
+            RectTransform barRT = statBar.GetComponent<RectTransform>();
             barRT.anchorMin = new Vector2(1f, 1f);
             barRT.anchorMax = new Vector2(1f, 1f);
-            barRT.pivot = new Vector2(1f, 1f);      
-            barRT.anchoredPosition = new Vector2(-80f, -10f);
+            barRT.pivot = new Vector2(1f, 1f);
 
-            hungerBar.statName = "Hunger";
-            hungerBar.SetValue(100f);
+            float yOffset = -10f - (index * 30f);
+            barRT.anchoredPosition = new Vector2(-80f, yOffset);
+
+            statBar.statName = statName;
+            statBar.SetValue(100f);
+            statBar.color = color;
+
+            if (system != null)
+            {
+                system.SetStatBar(statBar);
+            }
+            else
+            {
+                Debug.LogWarning($"System not found for stat: {statName}");
+            }
         }
         else
         {
-            Debug.LogWarning("StatBar prefab not assigned in UIController");
-        }
-
-        HungerSystem hungerSystem = FindFirstObjectByType<HungerSystem>();
-
-        if (hungerSystem != null)
-        {
-            hungerSystem.hungerBar = hungerBar;
-        }
-        else
-        {
-            Debug.LogWarning("No HungerSystem found in the scene.");
+            Debug.LogWarning("StatBar prefab not assigned in UIController.");
         }
     }
 }
