@@ -11,6 +11,12 @@ public class HungerSystem : MonoBehaviour, IStatSystem
     private float hungerTimer;
 
     private StatBar healthBar;
+    private HealthSystem healthSystem;
+
+    void Awake()
+    {
+        healthSystem = GetComponent<HealthSystem>();
+    }
 
     void Update()
     {
@@ -36,6 +42,7 @@ public class HungerSystem : MonoBehaviour, IStatSystem
 
         if (currentHunger <= 0)
         {
+            healthSystem.Damage(5);
         }
     }
 

@@ -6,6 +6,11 @@ public class HealthSystem : MonoBehaviour, IStatSystem
     public int currentHealth = 100;
 
     private StatBar hungerBar;
+    private MovementController movementController;
+
+    void Awake() {
+        movementController = transform.parent.GetComponentInChildren<MovementController>();
+    }
 
     void Update()
     {
@@ -21,7 +26,7 @@ public class HealthSystem : MonoBehaviour, IStatSystem
 
         if (currentHealth <= 0)
         {
-
+            movementController.enabled = false;
         }
     }
 
